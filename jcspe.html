@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+<meta charset="UTF-8">
+<title>JavaScript Exercises and Projects</title>
+	<link rel="stylesheet" type="text/css" href="jcsp.css">
+</head>
+<body>
+
+<h1>Joseph Cisar Student Portfolio</h1>
+
+<!--Header navigation-->
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8213ad;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="jcsp.html">About Me</a>
+  <a href="fields report.pdf">Fields Report</a>
+  <a href="jcspe.html">JavaScript Exercises and Projects</a>
+  <a href="jcspcontact.html">Contact</a>
+  <a href="jcsphelp.html">Usability and Accessibility</a>
+</div>
+</body>
+
+<h2>Exercise 1</h2>
+    <h3>Problem Statement</h3>
+            <p>Write a program that calculates the total price of a pair of Nike shoes.</p>
+        <h3>Plan</h3>
+            <p>Ask user for price of shoes</p>
+        <h3>Solution</h3>
+     var shoePrice =  parseInt(document.getElementById('shoePriceInput1').value);
+	 <br>
+     var totalCost = shoePrice + (shoePrice * .0625);
+     <br>
+     document.getElementById("cost1").innerHTML = "Total Cost = " + totalCost;
+
+    <h3>Demonstration</h3>
+        <p>A normal pair of Nike shoes costs around $70 with a 6.25% sales tax. Enter different integers to see how other shoe prices vary.</p>
+	<label for="shoePriceInput1">Shoe Price:</label> 
+	<input type="text" id="shoePriceInput1" value=""><br>
+    <button onclick="shoePriceCalc1()">What's the damage?</button>
+    <p id="cost1"></p>
+    
+    <script> 
+// Shoe price calculation showing total cost
+        function shoePriceCalc1() {
+            var shoePrice =  parseInt(document.getElementById('shoePriceInput1').value);
+            var totalCost = shoePrice + (shoePrice * .0625);
+            document.getElementById("cost1").innerHTML = "Total Cost = " + totalCost;
+        }
+    </script>
+
+<h2>Exercise 2</h2>
+    <h3>Problem Statement</h3>
+        <p>Write a program that compares ages to see if a child should leave the county or not.</p>
+    <h3>Plan</h3>
+        <p>Ask user for an age</p>
+        <h3>Solution</h3>
+    var age, voteable;
+    <br>
+    age = document.getElementById("age").value;
+	<br>
+    voteable = (age < 5) ? "Too young":"Old enough";
+	<br>
+    document.getElementById("travelAge").innerHTML = voteable + " to leave the country.";
+	
+    <h3>Demonstration</h3>
+    <p2>*Based off of surveys* People believe children shouldn't travel out of the country until a certain age. What age do you think? Enter the age and see if it's too young or old enough.</p2>
+<label for="age">Age:</label> 
+<input id="age" value="5" />
+
+<button onclick="canTravel()">Find Out!</button>
+
+<p id="travelAge"></p>
+
+    <script>
+// Program that uses variables and condition statements
+function canTravel() {
+    var age, voteable;
+    age = document.getElementById("age").value;
+    voteable = (age < 5) ? "Too young":"Old enough";
+    document.getElementById("travelAge").innerHTML = voteable + " to leave the country.";
+}
+    </script>
+
+<h2>Exercise 3</h2>
+    <h3>Problem Statement</h3>
+	    <p>Write a program that says "Hello World!" using JavaScript.
+    <h3>Plan</h3>
+        <p>Greet the user with "Hello World!"</p>
+    <h3>Solution</h3>
+
+     document.getElementById("demo").innerHTML = "Hello World!";
+    
+    <h3>Demonstration</h3>
+    
+
+<p id="demo"></p>
+
+    <script>
+// Program that outputs "Hello World!"
+document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+
+<h2>Exercise 4</h2>
+    <h3>Problem Statement</h3>
+	    <p>Write a program for when a user enters the page, the user is asked to enter one's name and be greeted to the page.
+    <h3>Plan</h3>
+        <p>Ask for user name with Input and show Output</p>
+    <h3>Solution</h3>
+
+    var name = prompt('What is your name?');
+	<br>
+    alert ('Welcome' + ', to my JavaScript exercises, ' + name + '!');
+	<br>
+    alert(name);
+	<br>
+    document.write(name);
+    <br>
+    document.getElementById("demo").innerHTML = carName;
+    
+    <h3>Demonstration</h3>
+
+<p id="demo"></p>
+
+    <script>
+// Program that asks for users name and outputs a message when given input
+    var name = prompt('What is your name?');
+    alert ('Welcome' + ', to my JavaScript exercises, ' + name + '!');
+    alert(name);
+    document.write(name);
+
+     document.getElementById("demo").innerHTML = carName;
+    </script>
+
+<h2>Exercise 5</h2>
+    <h3>Problem Statement</h3>
+        <p>Write a program that loops all forward rugby positions in order.</p> 
+    <h3>Plan</p>
+	    <p>Show all forward rugby positions looped in order.</p>
+    <h3>Solution</h3>
+    var positions = ["Loosehead Prop", "Hooker", "Tighthead Prop", "Lock", "Lock", "Flanker", "Flanker", "Number 8"];
+    <br>
+	var i = 0;
+	<br>
+    var len = positions.length;
+	<br>
+    var text = "";
+    <br>
+    for (; i < len; i++) {
+    text += positions[i] + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text;
+
+    <h3>Demonstration</h3>
+        <p>A list of foward rugby positon in order from numbers 1-8:</p>
+
+<p id="demo2"></p>
+
+    <script>
+// For loop program that aligns the order
+    var positions = ["Loosehead Prop", "Hooker", "Tighthead Prop", "Lock", "Lock", "Flanker", "Flanker", "Number 8"];
+    var i = 0;
+    var len = positions.length;
+    var text = "";
+
+for (; i < len; i++) {
+        text += positions[i] + "<br>";
+}
+
+    document.getElementById("demo2").innerHTML = text;
+    </script>
+
+<h2>Exercise 6</h2>
+    <h3>Problem Statement</h3>
+	    <p>Write a program using decision (if statements) that when a number is entered, the corresponding month shows.</p>
+    <h3>Plan:</h3>
+        <p>Ask the user to enter a number to receive a month.</p> 
+    <h3>Solution</h3>
+	function myFunction() {
+	<br>
+    var month = document.getElementById('numb').value; 
+	<br>
+    var greeting;
+	<br>
+    if (month == 1) {
+	<br>
+        greeting = "January";
+	<br>
+    } else if (month == 2) {
+	<br>
+        greeting = "February";
+	<br>
+    } else if (month == 3) {
+	<br>
+        greeting = "March";
+	<br>
+    } else if (month == 4) {
+	<br>
+        greeting = "April";
+	<br>
+    } else if (month == 5) {
+	<br>
+        greeting = "May";
+	<br>
+    } else if (month == 6) {
+	<br>
+        greeting = "June";
+	<br>
+    } else if (month == 7) {
+	<br>
+        greeting = "July";
+	<br>
+    } else if (month == 8) {
+	<br>
+        greeting = "August";
+	<br>
+    } else if (month == 9) {
+	<br>
+        greeting = "September";
+	<br>
+    } else if (month == 10) {
+	<br>
+        greeting = "October";
+	<br>
+    } else if (month == 11) {
+	<br>
+        greeting = "November";
+	<br>
+    } else if (month == 12) {
+	<br>
+        greeting = "December";
+	<br>
+    } else {
+	<br>
+        greeting = "Incorrect input.";
+	<br>
+    }
+	<br>
+    document.getElementById("whatMonth").innerHTML = greeting;
+	<br>
+}
+
+    <h3>Demonstration</h3>
+<label for="numb">Number 1-12:</label> 
+<input id="numb"> 
+
+<button onclick="myFunction()">Find the month!</button>
+
+<p id="whatMonth"></p>
+
+    <script>
+// Program that uses else if statement and outputs month 
+function myFunction() {
+    var month = document.getElementById('numb').value; 
+    var greeting;
+    if (month == 1) {
+        greeting = "January";
+    } else if (month == 2) {
+        greeting = "February";
+    } else if (month == 3) {
+        greeting = "March";
+    } else if (month == 4) {
+        greeting = "April";
+    } else if (month == 5) {
+        greeting = "May";
+    } else if (month == 6) {
+        greeting = "June";
+    } else if (month == 7) {
+        greeting = "July";
+    } else if (month == 8) {
+        greeting = "August";
+    } else if (month == 9) {
+        greeting = "September";
+    } else if (month == 10) {
+        greeting = "October";
+    } else if (month == 11) {
+        greeting = "November";
+    } else if (month == 12) {
+        greeting = "December";
+    } else {
+        greeting = "Incorrect input.";
+    }
+    document.getElementById("whatMonth").innerHTML = greeting;
+    }
+    </script>
+
+<h2>Projects</h2>
+<!--The Scratch projects are MIT based programming tools for learning code-->
+    <h3>Scratch</h3>
+        <p>Scratch is a programming language developed by MIT that allows children and adults to learn
+           how to think creatively in the early stages of programming. People all over the world can 
+           create games, stories, and other animations using it. 
+<!--Listed links to projects-->
+<h4><i>My Scratch Projects</i></h4>
+	<ul>
+	   <li>Completed: <a href="https://scratch.mit.edu/projects/172548432/">First Project</a></li>
+	   <li>In Progress: <a href="https://scratch.mit.edu/projects/173483086/">Penalty Kick</a></li>
+       <li>In Progress: <a href="https://scratch.mit.edu/projects/175818808/">Learning</a></li>
+<br>
+<br>
+
+</body>
+</html>
