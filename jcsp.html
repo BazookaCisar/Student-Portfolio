@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Joseph Cisar's Student Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="jcsp.css">
+</head>
+<body>
+
+<h1>Joseph Cisar Student Portfolio</h1>
+
+<!--Header navigation-->
+<style>
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8213ad;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="jcsp.html">About Me</a>
+  <a href="fields report.pdf">Fields Report</a>
+  <a href="jcspe.html">JavaScript Exercises and Projects</a>
+  <a href="jcspc.html">C++ Exercises</a>
+  <a href="jcspcontact.html">Contact</a>
+  <a href="jcsphelp.html">Usability and Accessibility</a>
+</div>
+</body>
+ 
+<h2>About Me</h2>
+
+<h3>Hello World!</h3>
+<!--This code allows an SVG to be inserted and have text wrapped around.-->
+<style>
+.right {
+    float:right;
+}
+</style>
+<div class="right">
+<svg height="125" width="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"
+      style="stop-color:rgb(0,0,255);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(0,255,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="40" y="86">FGCU</text>
+</svg>
+</div>
+<!--Information on myself-->
+<p>My name is Joseph Cisar and I was born December 8th, 1996 in <strong>Plantation, Florida</strong>. I was born on the same day as my grandmother and my uncle. I am currently in my third year at Florida Gulf Coast University and my first year as a Software Engineering Major.
+In starting my first year as a Software Engineering Major, I plan to complete courses to my highest ability to prepare me for future courses and jobs.
+Since beginning college I have been on the Men's Rugby Team and will continue to be on the team until I am ineligible to play, as a 5-year max to being on teams. Since junior year of high school I have helped in three student films, too. 
+Two of which have been sent into popular film festivals! Throughout my life I have always traveled with my family; my first trip when I was six months old. It is a huge part of my life that I love. I have learned a vast amount of culture, history, and 
+many other subjects due to traveling to so many countries.</p>
+
+<!--Information on Intro to Computer Science-->
+<h3>Introduction to Computer Science</h3>
+<p>In Intro to Computer Science, I have learned the basics of HTML and CSS which has allowed me to create this portfolio. I have also learned about Binary Values and Number Systems, Gates and Circuits, Data Representation, Algorithms and many other things.
+For the rest of the semester I plan to learn and practice more languages of code that will allow me to thrive in my future endeavors with Software Engineering as my major.</p>
+
+<!--Information on Mobile App Development-->
+<h3>Mobile App Development</h3>
+<p>In Mobile App development, I have learned Python and how to use Android Studios. Using an emulator in Android Studios, I helped to create a mobile application for <a href="https://www.bluezonesproject.com/">The Blue Zones Project</a>. 
+In this class I hope to strengthen what I already know about Python to help my future studies.</p>
+
+<!--Information on Intro to C++-->
+<h3>Introduction to C++</h3>
+<p>I am currently learning the C++ language. This course provides an introduction to computer design and development using C++language.  A structured, multi-phase, program development process, featuring a series of steps involving problem definition, 
+top-down design, and formal specification is stressed. The course is intended to provide myself with the techniques needed to develop well-documented, structured computer programs.</p>
+
+<!--List and link regarding rugby-->
+<h3>Rugby Positions I Play</h3>
+	<ul>
+	   <li>Lock</li>
+	   <li>Flanker</li>
+	   <li>Number Eight</li>
+	 <div> 
+	<a href="https://en.wikipedia.org/wiki/Rugby_union_positions#Locks">Full List of all Rugby Positions</a>
+     </div>
+
+<h3>Travel</h3>
+
+<!--Allow an mp4 file to play-->
+<video width="320" height="240" controls>
+  <source src="jcspvid.mp4" type="video/mp4">
+  <source src="jcspvid.mp4" type="video/ogg">
+</video>
+
+<!--Created a table with multiple sections-->
+<table>
+  <tr>
+    <th>Continent</th>
+    <th>Number of Countries Visited</th>
+	<th>Percentage of the Continent Visited</th>
+  </tr>
+  <tr>
+    <td>Europe</td>
+    <td>28</td>
+    <td>49%</td>
+  </tr>
+  <tr>
+    <td>Asia</td>
+    <td>1</td>
+    <td>2%</td>
+  </tr>
+  <tr>
+    <td>North America</td>
+    <td>13</td>
+    <td>34%</td>
+  </tr>
+  <tr>
+    <td>South America</td>
+    <td>5</td>
+    <td>35%</td>
+  </tr>
+  <tr>
+    <td>Australia (with New Zealand)</td>
+    <td>2</td>
+    <td>100%</td>
+  </tr>
+</table>
+
+*Based off of surveys* People believe children shouldn't travel out of the country until a certain age. What age do you think? Enter the age and see if it's too young or old enough. 
+<label for="age">Age:</label>
+<input id="age" value="5" />
+
+<button onclick="canTravel()">Find Out!</button>
+
+<p id="travelAge"></p>
+
+<script>
+// Program that uses variables and condition statements
+function canTravel() {
+    var age, voteable;
+    age = document.getElementById("age").value;
+    voteable = (age < 5) ? "Too young":"Old enough";
+    document.getElementById("travelAge").innerHTML = voteable + " to leave the country.";
+}
+</script>
+
+<h3>One More Thing About Me</h3>
+<p>I am extremely passionate about music. I love Classic Rock, Hip-Hop, R&B, Rock, and Pop. My favorite rapper is Drake and this is the intro to one of my favorite songs by him, "Forever" featuring Kanye West, Lil' Wayne, and Eminem. I added the audio by converting the m4a audio file into a mp3 file and then using the HTML audio element.</p>
+<!--Allow an mp3 audio file to play-->
+<audio controls>
+  <source src="jcspaudio.ogg" type="audio/ogg">
+  <source src="jcspaudio.mp3" type="audio/mpeg">
+</audio>
+
+<br>
+<br>
+
+<center>
+<!--Link and images to/from IMDB-->
+<img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZDQ1Nzk1ZTItZTM2Mi00MWU2LWJmZjQtYjc4ODBhZGMyNjk2XkEyXkFqcGdeQXVyNjkxODY5ODU@._V1_SY1000_CR0,0,589,1000_AL_.jpg" alt="The Centanarian" style="width:550px;height:600px;">
+
+<img src="https://images-na.ssl-images-amazon.com/images/M/MV5BZDFmNjIwOGMtZjY3MC00MDg5LWIxNmMtNTQzMmE4Y2NjNjMyXkEyXkFqcGdeQXVyNjkxODY5ODU@._V1_.jpg" alt="Connections: The Marcello Story" style="width:550px;height:600px;"> 
+
+<img src="https://images-na.ssl-images-amazon.com/images/M/MV5BYTZjYWEzMjEtMmNkYi00MTFjLTkxMjAtMzE5NjNmZDgzY2Q4L2ltYWdlXkEyXkFqcGdeQXVyNjkxODY5ODU@._V1_.jpg" alt="Connections Part II: Final Affairs"  style="width:550px;height:600px;">
+
+<img src="https://m.media-amazon.com/images/M/MV5BZTc4NTRmMGMtYjgzMS00YjdhLWJlNmUtMTY2ZmI3NmY1MzNhXkEyXkFqcGdeQXVyNjkxODY5ODU@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Walkin' the Way" style="width:550px;height:600px;">
+<br>
+<p2>Recently, <i>The Centenarian</i> won two awards at the Hollywood Film Festival in Hollywood, Florida. It won Best Student Film and the director, Peter Alexander, won Best Director. To see more about the student films I was involved in click on the link below!</p2>
+<br>
+<a href="http://www.imdb.com/name/nm8722709/">Joseph Cisar IMDB</a>
+
+<br>
+<br>
+<div align="left">
+<canvas id="myCanvas" width="260" height="150" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+//Create canvas with style arrangements and multiple colors
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(130,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#000000"; //black
+ctx.arc(0,0,0,0,Math.PI*2,true);
+ctx.fill();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(40,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#306EFF"; //blue
+ctx.arc(580,15,15,0,Math.PI*2,true);
+ctx.fill();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(85,100,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#FFD801"; //yellow
+ctx.arc(0,0,0,0,Math.PI*2,true);
+ctx.fill();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(175,100,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#4CC417"; //green
+ctx.arc(0,0,0,0,Math.PI*2,true);
+ctx.fill();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(220,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle = "#FF2400"; //red
+ctx.arc(15,15,15,0,Math.PI*2,true);
+ctx.fill();
+</script> 
+</div>
+These colored circles represent the rings of The Olympics. What year was the first modern day Olympic Games held? Enter a year from 1890-1898.
+<label for="numb">Year:</label>
+<input id="numb"> 
+
+<button onclick="myFunction()">The answer is...</button>
+
+<p id="whatYear"></p>
+
+<script>
+// Program using else if statements for year value
+function myFunction() {
+    var year = document.getElementById('numb').value; 
+    var greeting;
+    if (year == 1890) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1891) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1892) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1893) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1894) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1895) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1896) {
+        greeting = "Correct, it was in 1896!";
+    } else if (year == 1897) {
+        greeting = "Incorrect, try again.";
+    } else if (year == 1898) {
+        greeting = "Incorrect, try again.";
+    } else {
+        greeting = "Incorrect input.";
+    }
+    document.getElementById("whatYear").innerHTML = greeting;
+}
+</script>
+
+<!--Showing outcome-->
+<button type="button" onclick="alert('Last night the Miami Heat won against the Orlando Magic')">Click to see the outcome of last Miami Heat game.</button>
+
+<br>
+<!--Icon image to Miami Heat website-->
+ <a href="http://www.nba.com/heat/home/">
+  <img src="http://i.cdn.turner.com/drp/nba/heat/sites/default/files/styles/logo/public/logo-full-color.png?itok=e7xLKUZM" alt="Miami Heat Home" style="width:42px;height:42px;border:0;">
+</a>
+
+</body>
+</html>
